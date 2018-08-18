@@ -38,4 +38,8 @@ public class AisleProductAtLocationPK implements Serializable {
 	public int hashCode() {
 		return Objects.hash(locationid, productid);
 	}
+	@Override
+	public String toString() {
+		return "locationid: "+this.locationid+", productid: "+this.productid;
+	}
 }
