@@ -48,5 +48,10 @@ public class Application implements CommandLineRunner {
 				aisle.getAisleName() + "," +aisle.getDescription()+" at the location "+
 				aisle.getLocation().getAddress()+ ","+aisle.getLocation().getStore().getName());
 		log.info("*************************************************************************************************");
+		String customMethod = aisleFinderForCategoryRepo.customMethod("loc", "category");
+		log.info("Custom method from aisleFinderForCategoryRepo "+ customMethod);
+		
+		String customMethod2 = aisleFindeForProductrRepo.customMethod("loc", "product");
+		log.info("Custom method from aisleFindeForProductrRepo "+ customMethod2);
 	}
 }
