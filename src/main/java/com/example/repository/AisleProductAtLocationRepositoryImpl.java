@@ -19,7 +19,24 @@ public class AisleProductAtLocationRepositoryImpl implements AisleProductAtLocat
 	}
 	@Override
 	public String customMethod(String locationid, String categoryid) {
+		
 		return locationid+"::"+categoryid;
+	}
+	@Override
+	public String findAisleForProduct(String locationid, String categoryid) {
+		
+		return null;
+	}
+	@Override
+	public String findAisleForProductAndCategory(String locationid, String categoryid) {
+		
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String findAisleForCategory(String locationid, String categoryid) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 
