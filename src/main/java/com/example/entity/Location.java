@@ -2,6 +2,7 @@ package com.example.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -33,9 +34,13 @@ public class Location {
 //	@Transient
 	@OneToMany(fetch=FetchType.LAZY, cascade=CascadeType.ALL, mappedBy="location")
 	private List<AisleCategoryAtLocation> aisles;
-	
-	
-	
+//	private String image;
+//	public String getImage() {
+//		return image;
+//	}
+//	public void setImage(String image) {
+//		this.image = image;
+//	}
 	public List<AisleCategoryAtLocation> getAisles() {
 		return aisles;
 	}

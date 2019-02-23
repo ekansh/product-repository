@@ -37,13 +37,14 @@ public class Application extends SpringBootServletInitializer implements Command
 	@Override
 	public void run(String... arg0) throws Exception {
 		log.info("Executing command line runner");
-		AisleCategoryAtLocation findOne = aisleFinderForCategoryRepo.findOne(new AisleCategoryAtLocationPK(5L, 2L));
-		log.info("*************************************************************************************************");
+		AisleCategoryAtLocation findOne = aisleFinderForCategoryRepo.findOne(new AisleCategoryAtLocationPK(2L, 1L));
+		
+		log.info(findOne+"*************************************************************************************************");
 		log.info(" Category of  " + findOne.getCategory().getName()+" present at "+
 				findOne.getAisleName() + "," +findOne.getDescription()+" at the location "+
 				findOne.getLocation().getAddress()+ ","+findOne.getLocation().getStore().getName());
 		
-		AisleProductAtLocation aisle = aisleFindeForProductrRepo.findOne(new AisleProductAtLocationPK(5L, 1L));
+		AisleProductAtLocation aisle = aisleFindeForProductrRepo.findOne(new AisleProductAtLocationPK(1L, 1L));
 		log.info("*************************************************************************************************");
 		log.info(" Product  " + aisle.getProduct().getName()+" present at "+
 				aisle.getAisleName() + "," +aisle.getDescription()+" at the location "+

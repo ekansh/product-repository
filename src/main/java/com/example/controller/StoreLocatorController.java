@@ -24,7 +24,7 @@ import com.example.entity.Store;
 import com.example.repository.StoreRepository;
 import com.example.vo.StoreLocationVO;
 import com.example.vo.StoreVO;
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class StoreLocatorController {

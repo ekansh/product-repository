@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.example.entity.Product;
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 //@RepositoryRestResource(collectionResourceRel = "store", path = "store")
 public interface ProductRepository extends CrudRepository<Product, Long> {
 

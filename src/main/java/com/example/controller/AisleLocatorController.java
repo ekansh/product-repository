@@ -31,7 +31,7 @@ import com.example.vo.AisleInfoVO;
 import com.example.vo.StoreLocationVO;
 import com.example.vo.StoreVO;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/searchat")
 public class AisleLocatorController {
@@ -53,7 +53,7 @@ public class AisleLocatorController {
 		System.out.println("product repo " + aisleFindeForProductrRepo + " category repo " + aisleFinderForCategoryRepo
 				+ " store repo " + storeRepo);
 		List<Product> findByNameContaining = productRepo.findByNameContaining(product);
-		System.out.println("findByNameContaining "+findByNameContaining);
+		System.out.println("findByNameContaining " + findByNameContaining);
 		Collection<AisleInfoVO> target = new ArrayList<>();
 		for (Product product2 : findByNameContaining) {
 			System.out.println(product2.getName() + "::" + product2.getProductid());
@@ -68,8 +68,8 @@ public class AisleLocatorController {
 				target.add(aisleInfoVO);
 			}
 		}
-
 		return new ResponseEntity<>(target, HttpStatus.OK);
 	}
 
+	
 }
