@@ -15,15 +15,15 @@ import com.example.entity.AisleProductAtLocationPK;
 public interface AisleProductAtLocationRepository extends CrudRepository<AisleProductAtLocation, AisleProductAtLocationPK>, AisleProductAtLocationRepositoryCustom {
 	public List<AisleProductAtLocation> findByAisleName(@Param("name") String aisleName);
 	/**
-	 * Id is the embedded key ,to get access locationid and productid which are part of embedded key 
-	 * we use IdLocationidAndIdProductId
-	 * @see http://localhost:8080/aisleProductAtLocationRepository/search/findByIdLocationidAndIdProductid?locationid=5&productid=1
-	 * @see https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-property-expressions
-	 * @see https://stackoverflow.com/questions/43865079/spring-jpa-find-by-embeddedid-partially/43882807
-	 * @param locationid
-	 * @param categoryid
-	 * @return
-	 */
+	 Id is the embedded key ,to get access locationid and productid which are part of embedded key 
+	 we use IdLocationidAndIdProductId
+	 @see http://localhost:8080/aisleProductAtLocationRepository/search/findByIdLocationidAndIdProductid?locationid=5&productid=1
+	 @see https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-property-expressions
+	 @see https://stackoverflow.com/questions/43865079/spring-jpa-find-by-embeddedid-partially/43882807
+	 @param locationid
+	 @param categoryid
+	 @return
+	/
 	public List<AisleProductAtLocation> findByIdLocationidAndIdProductid
 	(@Param("locationid") Long locationid,@Param("productid") Long productid);
 

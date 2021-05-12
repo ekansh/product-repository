@@ -8,8 +8,8 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class AisleCategoryAtLocationPK implements Serializable {
 	/**
-	 * 
-	 */
+	 
+	/
 	private static final long serialVersionUID = 1L;
 	private Long locationid;
 	private Long categoryid;

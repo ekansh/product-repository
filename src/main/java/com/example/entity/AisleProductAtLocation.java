@@ -13,8 +13,8 @@ import javax.persistence.MapsId;
 @Entity
 public class AisleProductAtLocation implements Serializable {
 	/**
-	 * 
-	 */
+	 
+	/
 	private static final long serialVersionUID = 1L;
 	@EmbeddedId
 	private AisleProductAtLocationPK id;

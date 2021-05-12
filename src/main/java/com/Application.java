@@ -1,5 +1,6 @@
 package com;
 
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +53,7 @@ public class Application extends SpringBootServletInitializer implements Command
 		log.info("*************************************************************************************************");
 		String customMethod = aisleFinderForCategoryRepo.customMethod("loc", "category");
 		log.info("Custom method from aisleFinderForCategoryRepo "+ customMethod);
-		
+		 
 		String customMethod2 = aisleFindeForProductrRepo.customMethod("loc", "product");
 		log.info("Custom method from aisleFindeForProductrRepo "+ customMethod2);
 	}
